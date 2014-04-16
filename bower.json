@@ -1,0 +1,32 @@
+{
+    "name": "angular-cordova-vibration",
+    "version": "1.0.0",
+    "homepage": "https://github.com/xelita/angular-cordova-vibration",
+    "authors": [
+        "xelita <admin@xelita.com>"
+    ],
+    "description": "Bring Apache Cordova Vibration API to AngularJS Apps...",
+    "main": "src/cordovaVibrationModule.js",
+    "keywords": [
+        "angular",
+        "cordova",
+        "vibration",
+        "plugin"
+    ],
+    "license": "MIT",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "devDependencies": {
+        "angular": "~1.2.3",
+        "angular-mocks": "~1.2.3"
+    },
+    "dependencies": {
+        "angular": "~1.2.3"
+    }
+}
