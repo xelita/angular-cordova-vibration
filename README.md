@@ -38,4 +38,4 @@ $scope.vibrate = function(ms) {
 Sample
 ------
 A sample based on Ionic Framework can be found here:
-https://github.com/xelita/angular-cordova-vibration-sample
+https://github.com/xelita/angular-cordova-plugins-sample
