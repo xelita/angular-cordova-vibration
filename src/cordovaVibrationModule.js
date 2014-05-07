@@ -1,5 +1,6 @@
 /**
- * Angular Module relying on Apache Cordova Vibration Plugin (cordova plugin add org.apache.cordova.vibration).
+ * Angular Module relying on Apache Cordova Network Information Plugin (cordova plugin add org.apache.cordova.device).
+ * For more information: https://github.com/apache/cordova-plugin-vibration
  */
 var cordovaVibrationModule = angular.module('cordovaVibrationModule', []);
 
@@ -38,7 +39,7 @@ cordovaVibrationModule.factory('cordovaVibrationService', ['$log', 'cordovaVibra
 
         /**
          * Vibrates the device for the specified amount of time.
-         * For more informations: https://github.com/apache/cordova-plugin-vibration.
+         * For more information: https://github.com/apache/cordova-plugin-vibration/blob/master/doc/index.md#notificationvibrate
          */
         vibrate: function (milliseconds) {
             $log.debug('cordovaVibrationService.vibrate.');
