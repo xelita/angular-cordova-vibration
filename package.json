@@ -1,14 +1,14 @@
 {
     "name": "angular-cordova-vibration",
     "version": "1.0.0",
-    "description": "Bring Apache Cordova Vibration API to AngularJS Apps...",
-    "main": "src/cordovaVibrationModule.js",
-    "scripts": {
-        "bower": "bower install"
-    },
+    "description": "Bring Apache Cordova Vibration API to AngularJS Apps",
+    "homepage": "https://github.com/xelita/angular-cordova-vibration",
     "repository": {
         "type": "git",
         "url": "https://github.com/xelita/angular-cordova-vibration.git"
+    },
+    "bugs": {
+        "url": "https://github.com/xelita/angular-cordova-vibration/issues"
     },
     "keywords": [
         "angular",
@@ -18,12 +18,16 @@
     ],
     "author": "xelita <admin@xelita.com>",
     "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/xelita/angular-cordova-vibration/issues"
-    },
-    "homepage": "https://github.com/xelita/angular-cordova-vibration",
-    "dependecies": {},
+    "main": "src/cordovaVibrationModule.js",
     "devDependencies": {
+        "karma": "~0.12.14",
+        "karma-jasmine": "~0.1.5",
+        "karma-phantomjs-launcher": "~0.1.4",
         "bower": "~1.3.3"
+    },
+    "scripts": {
+        "postinstall": "bower install",
+        "test": "karma start test/karma.conf.js"
     }
 }
+
