@@ -35,7 +35,6 @@ describe("cordovaVibrationModule Tests Suite", function () {
                 cordovaVibrationService = _cordovaVibrationService_;
                 cordovaVibrationConstants = _cordovaVibrationConstants_;
             });
-            navigator.notification = null;
         });
 
         it("apiVersion should return apiVersion defined in cordovaVibrationConstants", function () {
@@ -46,6 +45,17 @@ describe("cordovaVibrationModule Tests Suite", function () {
             expect(cordovaVibrationService.cordovaVersion()).toBe('>=3.4.0');
         });
 
-        // TODO - Unit tests on vibrate method
+        it("vibrate when plugin is not installed should does nothing", function () {
+            navigator.notification = null;
+            cordovaVibrationService.vibrate(1000);
+        });
+
+        it("vibrate when plugin is installed should call vibrate on navigator.notification", function () {
+            navigator.notification = {};
+            navigator.notification.vibrate = jasmine.createSpy('vibrate spy');
+            cordovaVibrationService.vibrate(1000);
+            expect(navigator.notification.vibrate).toHaveBeenCalledWith(1000);
+        });
+
     });
 });
